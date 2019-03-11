@@ -119,12 +119,13 @@ let bizFuzz num =
         |false->div 1 (0,0,0)
 
 let monthDay _ _ =
-    failwith "Impossible"
-
-//my code for monthDay but it fails 
+    failwith "Not Implemented"
 
 (*let monthDay d y =
-        match isLeap y=true with
+        match d>0 && d<=366 && y>1582 with
+            |false->failwith "Not Implemented"
+            |true->
+                match isLeap y=true with
             |true-> match d<=366 && y >1582 with
                         |true->match 12*d/208 with
                                 |1->"January"
@@ -157,7 +158,7 @@ let monthDay _ _ =
                                 |12->"December"
                                 |_->failwith "Not Implemented"
                         |false->failwith "Not Implemented"
-                *)
+   *)             
 
 let sqrt n=
     let rec calculate guess i=
@@ -171,20 +172,26 @@ let sqrt n=
         |_->
             calculate(n/2.0) 0
 
-
-
-let coord __=
-    failwith "Impossible"
-
+let coord _=
+    failwith "Not Implemented"
 // my code for circle, the test fails 
-(*let coord (x1,y1) =
-    let dist coord (x2,y2)=
-        sqrt((x1-x2)*(x1-x2)+(y1-_)*(y1-y2))
-    let within coord (x3,y3)=
-         match x3>y1-y2 && x3<x1 && y3<=(x1+x2) && y3>=x1 with  
-        |true->true
-        |_->false
-     within      *)
+(*let coord  c =
+     let dist (x1,y1) (x2,y2) = 
+        let ans=sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
+        ans
+        let obj()=ans
+        let within  a b =
+           match x1>x2 && x1<(x2+a) && y1>(y2-b) && y1<y2 with 
+            |true-> true
+            |_->false
+        within
+     dist *)
+
+         
+            
+
+
+   
 
         
          
